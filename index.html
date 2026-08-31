@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>♡ 給半年後的我們 ♡</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f3eee7;
+    color: #66574e;
+    font-family:
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        sans-serif;
+}
+
+/* =========================
+   匯出按鈕
+========================= */
+
+.export-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    text-align: center;
+
+    padding: 12px;
+
+    background: rgba(250,247,242,0.97);
+
+    border-bottom: 1px solid #e6ddd4;
+}
+
+.export-bar button {
+    border: none;
+    border-radius: 999px;
+
+    padding: 11px 25px;
+
+    background: #a98f7e;
+    color: white;
+
+    font-size: 14px;
+    font-family: inherit;
+
+    box-shadow: 0 3px 10px rgba(120,90,70,0.12);
+}
+
+/* =========================
+   手機填寫頁
+========================= */
+
+.page {
+    width: 100%;
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    padding: 25px 17px 35px;
+
+    background: #fbf8f3;
+
+    min-height: 100vh;
+}
+
+/* =========================
+   標題
+========================= */
+
+.header {
+    text-align: center;
+    padding: 5px 0 15px;
+}
+
+.header-decoration {
+    color: #d1b6a2;
+    font-size: 18px;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+}
+
+h1 {
+    margin: 0;
+
+    font-family: serif;
+    font-weight: normal;
+
+    color: #806b5e;
+
+    font-size: 26px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    margin-top: 7px;
+
+    color: #aa9788;
+
+    font-size: 12px;
+}
+
+/* =========================
+   區塊
+========================= */
+
+.section {
+    display: flex;
+    align-items: center;
+
+    margin-top: 15px;
+    margin-bottom: 8px;
+
+    padding: 8px 11px;
+
+    background: #eee5db;
+
+    border-radius: 12px;
+
+    color: #765f52;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.section-dot {
+    width: 8px;
+    height: 8px;
+
+    margin-right: 8px;
+
+    background: #cdb19e;
+
+    border-radius: 50%;
+}
+
+/* =========================
+   題目
+========================= */
+
+.question {
+    margin-top: 8px;
+}
+
+.question-title {
+    margin-bottom: 4px;
+
+    color: #66574e;
+
+    font-size: 13px;
+
+    line-height: 1.45;
+}
+
+/* =========================
+   輸入框
+========================= */
+
+input,
+textarea {
+
+    display: block;
+
+    width: 100%;
+
+    border: 1px solid #ddd0c5;
+
+    border-radius: 9px;
+
+    background: #fffdfa;
+
+    padding: 8px 10px;
+
+    color: #594b43;
+
+    font-size: 15px;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+input {
+    height: 35px;
+}
+
+textarea {
+    height: 46px;
+
+    resize: vertical;
+}
+
+textarea.big {
+    height: 70px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #c8bbb0;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #c5aa96;
+
+    box-shadow:
+        0 0 0 2px rgba(197,170,150,0.12);
+}
+
+/* =========================
+   裝飾
+========================= */
+
+.little-note {
+    text-align: center;
+
+    margin: 10px 0 1px;
+
+    color: #c7aa96;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+}
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+    text-align: center;
+
+    margin-top: 17px;
+
+    color: #b09d90;
+
+    font-size: 10px;
+}
+
+/* =========================
+   手機
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    .page {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+}
+
+/* =========================
+   匯出時
+========================= */
+
+#exportCanvas {
+    display: none;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     匯出按鈕
+========================= -->
+
+<div class="export-bar">
+
+    <button onclick="exportMobileImage()">
+        ♡ 匯出我的答案圖片
+    </button>
+
+</div>
+
+
+<!-- =========================
+     填寫頁
+========================= -->
+
+<div class="page" id="page">
+
+
+    <div class="header">
+
+        <div class="header-decoration">
+            ♡　✦　♡
+        </div>
+
+        <h1>
+            ♡ 給半年後的我們 ♡
+        </h1>
+
+        <div class="subtitle">
+            一起把現在的我們，好好收藏起來。
+        </div>
+
+    </div>
+
+
+    <!-- 第一區 -->
+
+    <div class="section">
+        <span class="section-dot"></span>
+        01｜最近的我
+    </div>
+
+
+    <div class="question">
+        <div class="question-title">
+            1. 最近最喜歡你怎麼叫我？
+        </div>
+        <input type="text" placeholder="點這裡輸入……">
+    </div>
+
+
+    <div class="question">
+        <div class="question-title">
+            2. 最近最喜歡的食物？
+        </div>
+        <input type="text" placeholder="點這裡輸入……">
+    </div>
+
+
+    <div class="question">
+        <div class="question-title">
+            3. 最近最討厭的食物？
+        </div>
+        <input type="text" placeholder="點這裡輸入……">
+    </div>
+
+
+    <div class="question">
+        <div class="question-title">
+            4. 最近最喜歡的歌？
+        </div>
+        <input type="text" placeholder="點這裡輸入……">
+    </div>
+
+
+    <div class="question">
+        <div class="question-title">
+            5. 最近喜歡做的事情？
+        </div>
+        <input type="text" placeholder="點這裡輸入……">
+    </div>
+
+
+    <div class="question">
+        <div class="question-title">
+            6. 最近沉迷的東西？
+        </div>
+        <input type="text" placeholder="點這裡輸入……">
+    </div>
+
+
+    <div class="little-note">
+        ˚₊‧♡‧₊˚
+    </div>
+
+
+    <!-- 第二區 -->
+
+    <div class="section">
+        <span class="section-dot"></span>
+        02｜關於我們
+    </div>
+
+
+    <div class="question">
+        <div class="question-title">
+            7. 最近相處最幸福的瞬間？
+        </div>
+        <textarea placeholder="點這裡輸入……"></textarea>
+    </div>
+
+
+    <div class="question">
+        <div class="question-title">
+            8. 最近希望你多做的事情？
+        </div>
+        <textarea placeholder="點這裡輸入……"></textarea>
+    </div>
+
+
+    <div class="question">
+        <div class="question-title">
+            9. 最近想一起完成的事情？
+        </div>
+        <textarea placeholder="點這裡輸入……"></textarea>
+    </div>
+
+
+    <div class="question">
+        <div class="question-title">
+            10. 最近感謝的一件事？
+        </div>
+        <textarea placeholder="點這裡輸入……"></textarea>
+    </div>
+
+
+    <div class="little-note">
+        ☁︎　♡　☁︎
+    </div>
+
+
+    <!-- 第三區 -->
+
+    <div class="section">
+        <span class="section-dot"></span>
+        03｜給半年後的自己
+    </div>
+
+
+    <div class="question">
+        <div class="question-title">
+            11. 希望自己可以變成什麼樣子？
+        </div>
+        <textarea placeholder="點這裡輸入……"></textarea>
+    </div>
+
+
+    <div class="question">
+        <div class="question-title">
+            12. 半年後最想一起做的事？
+        </div>
+        <textarea placeholder="點這裡輸入……"></textarea>
+    </div>
+
+
+    <div class="question">
+        <div class="question-title">
+            13. 給這半年的我們一段話
+        </div>
+        <textarea
+            class="big"
+            placeholder="寫給半年後的我們……"
+        ></textarea>
+    </div>
+
+
+    <div class="footer">
+        ♡ 2026.08.31　｜　半年後再回來看看現在的我們 ♡
+    </div>
+
+</div>
+
+
+<!-- =========================
+     JavaScript
+========================= -->
+
+<script>
+
+
+/* =====================================================
+   自動保存
+===================================================== */
+
+const fields = document.querySelectorAll(
+    "#page input, #page textarea"
+);
+
+
+fields.forEach(function(field, index) {
+
+    const saved = localStorage.getItem(
+        "answer_" + index
+    );
+
+    if (saved !== null) {
+        field.value = saved;
+    }
+
+
+    field.addEventListener(
+        "input",
+        function() {
+
+            localStorage.setItem(
+                "answer_" + index,
+                field.value
+            );
+
+        }
+    );
+
+});
+
+
+
+/* =====================================================
+   取得答案
+===================================================== */
+
+function getAnswers() {
+
+    const fields = document.querySelectorAll(
+        "#page input, #page textarea"
+    );
+
+    const answers = [];
+
+    fields.forEach(function(field) {
+
+        answers.push(
+            field.value || ""
+        );
+
+    });
+
+    return answers;
+
+}
+
+
+
+/* =====================================================
+   Canvas 圖片匯出
+===================================================== */
+
+function exportMobileImage() {
+
+
+    const answers = getAnswers();
+
+
+    /*
+       1080px 寬
+
+       高度稍微壓縮，
+       但不犧牲文字清晰度。
+    */
+
+    const W = 1080;
+
+    const margin = 70;
+
+    const contentWidth =
+        W - margin * 2;
+
+
+    /* =================================================
+       先計算實際高度
+    ================================================= */
+
+    let H = 100;
+
+
+    H += 155;        // 標題
+
+
+    H += 62;         // 第一區標題
+
+    H += 6 * 75;     // 1～6
+
+
+    H += 42;         // 裝飾
+
+
+    H += 62;         // 第二區
+
+    H += 4 * 105;    // 7～10
+
+
+    H += 42;         // 裝飾
+
+
+    H += 62;         // 第三區
+
+    H += 105;        // 11
+
+    H += 105;        // 12
+
+    H += 145;        // 13
+
+
+    H += 65;         // footer
+
+
+
+    /* =================================================
+       建立 Canvas
+    ================================================= */
+
+    const canvas =
+        document.createElement("canvas");
+
+
+    canvas.width = W;
+
+    canvas.height = H;
+
+
+    const ctx =
+        canvas.getContext("2d");
+
+
+    if (!ctx) {
+
+        alert(
+            "圖片產生失敗，請重新整理後再試一次。"
+        );
+
+        return;
+    }
+
+
+    /*
+       讓文字邊緣更平滑
+    */
+
+    ctx.imageSmoothingEnabled = true;
+
+    ctx.imageSmoothingQuality = "high";
+
+
+    /* =================================================
+       背景
+    ================================================= */
+
+    ctx.fillStyle = "#fbf8f3";
+
+    ctx.fillRect(
+        0,
+        0,
+        W,
+        H
+    );
+
+
+    /* =================================================
+       背景裝飾
+    ================================================= */
+
+    function circle(
+        x,
+        y,
+        r,
+        color
+    ) {
+
+        ctx.beginPath();
+
+        ctx.fillStyle = color;
+
+        ctx.arc(
+            x,
+            y,
+            r,
+            0,
+            Math.PI * 2
+        );
+
+        ctx.fill();
+
+    }
+
+
+    circle(
+        55,
+        85,
+        28,
+        "#f0e5dc"
+    );
+
+
+    circle(
+        W - 60,
+        130,
+        38,
+        "#eee0d4"
+    );
+
+
+    circle(
+        35,
+        H - 110,
+        20,
+        "#f1e7df"
+    );
+
+
+    circle(
+        W - 35,
+        H - 160,
+        25,
+        "#f0e4da"
+    );
+
+
+    /* =================================================
+       標題
+    ================================================= */
+
+    ctx.textAlign = "center";
+
+
+    ctx.fillStyle = "#d1b5a1";
+
+    ctx.font =
+        "28px sans-serif";
+
+    ctx.fillText(
+        "♡　✦　♡",
+        W / 2,
+        50
+    );
+
+
+    ctx.fillStyle = "#806b5e";
+
+    ctx.font =
+        "48px serif";
+
+    ctx.fillText(
+        "♡ 給半年後的我們 ♡",
+        W / 2,
+        102
+    );
+
+
+    ctx.fillStyle = "#aa9788";
+
+    ctx.font =
+        "22px sans-serif";
+
+    ctx.fillText(
+        "一起把現在的我們，好好收藏起來。",
+        W / 2,
+        137
+    );
+
+
+
+    /* =================================================
+       區塊
+    ================================================= */
+
+    function drawSection(
+        title,
+        y
+    ) {
+
+        ctx.fillStyle =
+            "#eee5db";
+
+
+        ctx.beginPath();
+
+        ctx.roundRect(
+            margin,
+            y,
+            contentWidth,
+            48,
+            18
+        );
+
+        ctx.fill();
+
+
+        ctx.textAlign = "left";
+
+        ctx.fillStyle =
+            "#765f52";
+
+        ctx.font =
+            "bold 23px sans-serif";
+
+
+        ctx.fillText(
+            title,
+            margin + 22,
+            y + 32
+        );
+
+    }
+
+
+
+    /* =================================================
+       中文換行
+    ================================================= */
+
+    function wrapText(
+        text,
+        maxWidth,
+        font
+    ) {
+
+        if (!text) {
+            return [];
+        }
+
+
+        ctx.font = font;
+
+
+        const lines = [];
+
+        let line = "";
+
+
+        for (
+            let i = 0;
+            i < text.length;
+            i++
+        ) {
+
+            const char =
+                text.charAt(i);
+
+
+            const testLine =
+                line + char;
+
+
+            const width =
+                ctx.measureText(
+                    testLine
+                ).width;
+
+
+            if (
+                width > maxWidth &&
+                line !== ""
+            ) {
+
+                lines.push(line);
+
+                line = char;
+
+            } else {
+
+                line = testLine;
+
+            }
+
+        }
+
+
+        if (line !== "") {
+
+            lines.push(line);
+
+        }
+
+
+        return lines;
+
+    }
+
+
+
+    /* =================================================
+       題目
+    ================================================= */
+
+    function drawQuestion(
+        title,
+        answer,
+        y,
+        boxHeight
+    ) {
+
+
+        ctx.textAlign =
+            "left";
+
+
+        /* 題目 */
+
+        ctx.fillStyle =
+            "#66574e";
+
+        ctx.font =
+            "20px sans-serif";
+
+
+        ctx.fillText(
+            title,
+            margin,
+            y + 21
+        );
+
+
+        /* 答案框 */
+
+        const boxY =
+            y + 31;
+
+
+        ctx.fillStyle =
+            "#fffdfa";
+
+        ctx.strokeStyle =
+            "#d8cabe";
+
+        ctx.lineWidth =
+            2;
+
+
+        ctx.beginPath();
+
+        ctx.roundRect(
+            margin,
+            boxY,
+            contentWidth,
+            boxHeight,
+            13
+        );
+
+        ctx.fill();
+
+        ctx.stroke();
+
+
+        /* =================================================
+           答案文字
+        ================================================= */
+
+        if (
+            answer &&
+            answer.trim() !== ""
+        ) {
+
+            ctx.fillStyle =
+                "#594b43";
+
+            ctx.font =
+                "19px sans-serif";
+
+
+            const lines =
+                wrapText(
+                    answer,
+                    contentWidth - 40,
+                    "19px sans-serif"
+                );
+
+
+            const lineHeight = 29;
+
+
+            const maxLines =
+                Math.max(
+                    1,
+                    Math.floor(
+                        (boxHeight - 20) /
+                        lineHeight
+                    )
+                );
+
+
+            for (
+                let i = 0;
+                i < Math.min(
+                    lines.length,
+                    maxLines
+                );
+                i++
+            ) {
+
+                ctx.fillText(
+                    lines[i],
+                    margin + 20,
+                    boxY + 29 +
+                    i * lineHeight
+                );
+
+            }
+
+
+            /*
+               如果文字太長，
+               最後顯示省略符號
+            */
+
+            if (
+                lines.length >
+                maxLines
+            ) {
+
+                ctx.fillText(
+                    "⋯",
+                    margin + 20,
+                    boxY +
+                    29 +
+                    (maxLines - 1) *
+                    lineHeight
+                );
+
+            }
+
+        } else {
+
+            /* 空白提示 */
+
+            ctx.fillStyle =
+                "#c9bbb0";
+
+            ctx.font =
+                "18px sans-serif";
+
+
+            ctx.fillText(
+                "點這裡輸入……",
+                margin + 20,
+                boxY + 29
+            );
+
+        }
+
+
+        return boxY + boxHeight;
+
+    }
+
+
+
+    /* =================================================
+       開始排版
+    ================================================= */
+
+    let y = 180;
+
+
+    /* =================================================
+       第一區
+    ================================================= */
+
+    drawSection(
+        "01｜最近的我　♡",
+        y
+    );
+
+    y += 61;
+
+
+    const q1 = [
+
+        "1. 最近最喜歡你怎麼叫我？",
+        "2. 最近最喜歡的食物？",
+        "3. 最近最討厭的食物？",
+        "4. 最近最喜歡的歌？",
+        "5. 最近喜歡做的事情？",
+        "6. 最近沉迷的東西？"
+
+    ];
+
+
+    for (
+        let i = 0;
+        i < q1.length;
+        i++
+    ) {
+
+        y =
+            drawQuestion(
+                q1[i],
+                answers[i],
+                y,
+                43
+            );
+
+        y += 7;
+
+    }
+
+
+    /* 裝飾 */
+
+    ctx.textAlign =
+        "center";
+
+    ctx.fillStyle =
+        "#c9ad99";
+
+    ctx.font =
+        "22px sans-serif";
+
+    ctx.fillText(
+        "˚₊‧♡‧₊˚",
+        W / 2,
+        y + 24
+    );
+
+    y += 45;
+
+
+
+    /* =================================================
+       第二區
+    ================================================= */
+
+    drawSection(
+        "02｜關於我們　♡",
+        y
+    );
+
+    y += 61;
+
+
+    const q2 = [
+
+        "7. 最近相處最幸福的瞬間？",
+        "8. 最近希望你多做的事情？",
+        "9. 最近想一起完成的事情？",
+        "10. 最近感謝的一件事？"
+
+    ];
+
+
+    for (
+        let i = 0;
+        i < q2.length;
+        i++
+    ) {
+
+        y =
+            drawQuestion(
+                q2[i],
+                answers[i + 6],
+                y,
+                68
+            );
+
+        y += 7;
+
+    }
+
+
+    ctx.textAlign =
+        "center";
+
+    ctx.fillStyle =
+        "#c9ad99";
+
+    ctx.font =
+        "22px sans-serif";
+
+    ctx.fillText(
+        "☁︎　♡　☁︎",
+        W / 2,
+        y + 24
+    );
+
+    y += 45;
+
+
+
+    /* =================================================
+       第三區
+    ================================================= */
+
+    drawSection(
+        "03｜給半年後的自己　♡",
+        y
+    );
+
+    y += 61;
+
+
+    const q3 = [
+
+        "11. 希望自己可以變成什麼樣子？",
+        "12. 半年後最想一起做的事？",
+        "13. 給這半年的我們一段話"
+
+    ];
+
+
+    for (
+        let i = 0;
+        i < q3.length;
+        i++
+    ) {
+
+        y =
+            drawQuestion(
+                q3[i],
+                answers[i + 10],
+                y,
+                i === 2
+                    ? 105
+                    : 68
+            );
+
+        y += 7;
+
+    }
+
+
+
+    /* =================================================
+       Footer
+    ================================================= */
+
+    ctx.textAlign =
+        "center";
+
+    ctx.fillStyle =
+        "#b09d90";
+
+    ctx.font =
+        "17px sans-serif";
+
+
+    ctx.fillText(
+        "♡ 2026.08.31　｜　半年後再回來看看現在的我們 ♡",
+        W / 2,
+        y + 38
+    );
+
+
+
+    /* =================================================
+       下載
+    ================================================= */
+
+    canvas.toBlob(
+        function(blob) {
+
+            if (!blob) {
+
+                alert(
+                    "圖片產生失敗，請重新整理後再試一次。"
+                );
+
+                return;
+            }
+
+
+            const url =
+                URL.createObjectURL(blob);
+
+
+            const link =
+                document.createElement("a");
+
+
+            link.href = url;
+
+            link.download =
+                "給半年後的我們_我的答案.png";
+
+
+            link.style.display =
+                "none";
+
+
+            document.body.appendChild(link);
+
+
+            link.click();
+
+
+            document.body.removeChild(link);
+
+
+            setTimeout(
+                function() {
+
+                    URL.revokeObjectURL(url);
+
+                },
+                5000
+            );
+
+        },
+        "image/png"
+    );
+
+}
+
+</script>
+
+</body>
+</html>
