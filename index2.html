@@ -1,0 +1,2689 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>♡ 給半年後的我們 ♡</title><style>
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    background:
+        radial-gradient(
+            circle at 8% 8%,
+            rgba(244,220,211,.75) 0 32px,
+            transparent 33px
+        ),
+        radial-gradient(
+            circle at 94% 20%,
+            rgba(229,214,204,.8) 0 45px,
+            transparent 46px
+        ),
+        #eee7de;
+
+    color: #6b5a50;
+
+    font-family:
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        sans-serif;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   匯出按鈕
+===================================================== */
+
+.export-bar {
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    padding: 11px 14px;
+
+    text-align: center;
+
+    background: rgba(250,247,242,.96);
+
+    backdrop-filter: blur(14px);
+
+    border-bottom:
+        1px solid rgba(211,194,181,.45);
+}
+
+.export-bar button {
+
+    border: 1px solid #d4bbaa;
+
+    border-radius: 999px;
+
+    padding: 10px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b79a87,
+            #a98977
+        );
+
+    color: white;
+
+    font-size: 13px;
+
+    font-family: inherit;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 5px 15px rgba(120,90,70,.15);
+
+    cursor: pointer;
+}
+
+.export-bar button:active {
+    transform: scale(.96);
+}
+
+
+/* =====================================================
+   手機填寫頁
+===================================================== */
+
+.page {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    padding:
+        20px
+        14px
+        40px;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.28) 1px,
+            transparent 1px
+        ),
+
+        #faf7f1;
+
+    background-size:
+        100% 28px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 35px rgba(100,75,55,.05);
+}
+
+
+/* =====================================================
+   背景圓
+===================================================== */
+
+.page::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 125px;
+    height: 125px;
+
+    top: 72px;
+    left: -65px;
+
+    background: #f2dfd6;
+
+    border-radius: 50%;
+
+    opacity: .55;
+
+    pointer-events: none;
+}
+
+.page::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 145px;
+    height: 145px;
+
+    right: -80px;
+    top: 250px;
+
+    background: #eee1d7;
+
+    border-radius: 50%;
+
+    opacity: .65;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   背景插圖
+===================================================== */
+
+.bg-doodle {
+
+    position: absolute;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    color: #d8c0b3;
+
+    opacity: .75;
+}
+
+.bg-cloud {
+
+    top: 115px;
+    left: 9px;
+
+    font-size: 37px;
+
+    transform: rotate(-8deg);
+}
+
+.bg-flower {
+
+    top: 340px;
+    right: 9px;
+
+    font-size: 31px;
+
+    transform: rotate(10deg);
+}
+
+.bg-heart {
+
+    top: 610px;
+    left: 7px;
+
+    font-size: 27px;
+
+    transform: rotate(-12deg);
+}
+
+.bg-star {
+
+    top: 890px;
+    right: 12px;
+
+    font-size: 25px;
+
+    transform: rotate(8deg);
+}
+
+
+/* =====================================================
+   內容層
+===================================================== */
+
+.header,
+.section,
+.question,
+.little-note,
+.memory-card,
+.flower,
+.footer {
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =====================================================
+   標題
+===================================================== */
+
+.header {
+
+    text-align: center;
+
+    padding:
+        3px
+        4px
+        15px;
+}
+
+.header-decoration {
+
+    color: #c9a594;
+
+    font-size: 16px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 6px;
+}
+
+.header-sticker {
+
+    display: inline-block;
+
+    padding:
+        4px
+        14px;
+
+    margin-bottom: 7px;
+
+    border-radius: 9px;
+
+    background: #f0ded5;
+
+    color: #9f7e6c;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    transform: rotate(-2deg);
+
+    box-shadow:
+        2px 3px 0 #dfcfc5;
+}
+
+h1 {
+
+    display: inline-block;
+
+    position: relative;
+
+    margin: 0;
+
+    padding:
+        9px
+        16px;
+
+    background: #fffaf4;
+
+    border:
+        1px solid #eadbd0;
+
+    border-radius: 19px;
+
+    color: #80695d;
+
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    font-weight: normal;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 4px 0 #e7d8ce;
+
+    transform: rotate(-1deg);
+}
+
+h1::before {
+
+    content: "✿";
+
+    position: absolute;
+
+    left: -12px;
+    top: -12px;
+
+    color: #d3aa98;
+
+    font-size: 19px;
+}
+
+h1::after {
+
+    content: "♡";
+
+    position: absolute;
+
+    right: -11px;
+    bottom: -12px;
+
+    color: #d0a797;
+
+    font-size: 19px;
+}
+
+.subtitle {
+
+    margin-top: 9px;
+
+    color: #aa9081;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+.header-ribbon {
+
+    margin-top: 6px;
+
+    color: #c59d8b;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   小熊
+===================================================== */
+
+.mini-character {
+
+    position: absolute;
+
+    right: 13px;
+    bottom: 2px;
+
+    width: 48px;
+    height: 43px;
+
+    background: #e5cbbb;
+
+    border-radius:
+        48%
+        48%
+        42%
+        42%;
+
+    transform: rotate(4deg);
+
+    box-shadow:
+        2px 3px 0 #dcc6b9;
+}
+
+.mini-character::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 16px;
+    height: 16px;
+
+    left: 0;
+    top: -7px;
+
+    background: #e5cbbb;
+
+    border-radius: 50%;
+
+    box-shadow:
+        30px 1px 0 #e5cbbb;
+}
+
+.mini-character::after {
+
+    content: "•ᴗ•";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    top: 13px;
+
+    text-align: center;
+
+    color: #80675b;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+}
+
+
+/* =====================================================
+   Section
+===================================================== */
+
+.section {
+
+    display: flex;
+
+    align-items: center;
+
+    margin-top: 13px;
+    margin-bottom: 8px;
+
+    padding:
+        8px
+        13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f1e3d9,
+            #eadbd1
+        );
+
+    border:
+        1px solid #dfcfc3;
+
+    border-radius: 13px;
+
+    color: #755d50;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    box-shadow:
+        2px 3px 0 #ded0c7;
+
+    transform: rotate(-.35deg);
+}
+
+.section-dot {
+
+    flex: 0 0 auto;
+
+    width: 8px;
+    height: 8px;
+
+    margin-right: 10px;
+
+    background: #c6a18c;
+
+    border-radius: 50%;
+}
+
+.section::after {
+
+    content: "♡";
+
+    position: absolute;
+
+    right: 13px;
+
+    color: #bd9b88;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   Question
+===================================================== */
+
+.question {
+
+    position: relative;
+
+    margin-top: 7px;
+
+    padding:
+        7px
+        8px
+        8px;
+
+    background:
+        rgba(255,252,248,.93);
+
+    border:
+        1px solid #e7d9d0;
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 2px 7px rgba(120,90,70,.04),
+        1px 2px 0 rgba(230,216,207,.65);
+}
+
+.question-title {
+
+    margin-bottom: 4px;
+
+    padding-left: 2px;
+
+    color: #68564d;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   輸入
+===================================================== */
+
+input,
+textarea {
+
+    display: block;
+
+    width: 100%;
+
+    border:
+        1px solid #dfd0c6;
+
+    border-radius: 9px;
+
+    background: #fffdf9;
+
+    padding:
+        6px
+        9px;
+
+    color: #594941;
+
+    font-size: 14px;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+input {
+    height: 34px;
+}
+
+textarea {
+
+    height: 75px;
+
+    min-height: 75px;
+
+    resize: none;
+
+    line-height: 1.5;
+}
+
+textarea.big {
+
+    height: 125px;
+
+    min-height: 125px;
+}
+
+input::placeholder,
+textarea::placeholder {
+
+    color: #c9b9af;
+
+    font-size: 12px;
+}
+
+input:focus,
+textarea:focus {
+
+    background: #fffaf6;
+
+    border-color: #c6a18d;
+
+    box-shadow:
+        0 0 0 2px rgba(198,161,141,.12);
+}
+
+
+/* =====================================================
+   字數提示
+===================================================== */
+
+.char-count {
+
+    text-align: right;
+
+    margin-top: 2px;
+
+    padding-right: 2px;
+
+    color: #c5b1a5;
+
+    font-size: 9px;
+
+    line-height: 1;
+}
+
+
+/* =====================================================
+   裝飾
+===================================================== */
+
+.little-note {
+
+    text-align: center;
+
+    margin:
+        7px
+        0
+        3px;
+
+    color: #c5a08d;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   Memory Card
+===================================================== */
+
+.memory-card {
+
+    position: relative;
+
+    margin-top: 12px;
+
+    padding:
+        10px
+        12px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7ebe2,
+            #f2e3da
+        );
+
+    border:
+        1px dashed #d5b8a8;
+
+    border-radius: 16px;
+
+    color: #967b6b;
+
+    font-size: 9px;
+
+    line-height: 1.7;
+
+    box-shadow:
+        2px 3px 0 #e2d3ca;
+}
+
+.memory-card span {
+
+    display: inline-block;
+
+    margin-bottom: 2px;
+
+    padding:
+        1px
+        7px;
+
+    border-radius: 999px;
+
+    background: #ead6cc;
+
+    color: #a17e6d;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+.flower {
+
+    text-align: center;
+
+    margin-top: 6px;
+
+    color: #c6a08e;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+}
+
+.footer {
+
+    text-align: center;
+
+    margin-top: 7px;
+
+    color: #b19d91;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   Canvas
+===================================================== */
+
+#exportCanvas {
+    display: none;
+}
+
+</style></head><body><!-- =====================================================
+     匯出按鈕
+===================================================== --><div class="export-bar"><button
+    type="button"
+    onclick="exportMobileImage()"
+>
+    ♡　匯出我的答案圖片　♡
+</button>
+
+</div><!-- =====================================================
+     填寫頁
+===================================================== --><div class="page" id="page"><!-- 背景插圖 --><div class="bg-doodle bg-cloud">☁︎</div><div class="bg-doodle bg-flower">✿</div><div class="bg-doodle bg-heart">♡</div><div class="bg-doodle bg-star">✦</div><!-- =====================================================
+     標題
+===================================================== --><div class="header"><div class="header-decoration">
+    ˚₊‧♡‧₊˚　✦　˚₊‧♡‧₊˚
+</div>
+
+<div class="header-sticker">
+    OUR LITTLE MEMORY
+</div>
+
+<h1>
+    ♡ 給半年後的我們 ♡
+</h1>
+
+<div class="subtitle">
+    一起把現在的我們，好好收藏起來。
+</div>
+
+<div class="header-ribbon">
+    ୨୧　₊˚⊹♡⊹˚₊　୨୧
+</div>
+
+<div class="mini-character"></div>
+
+</div><!-- =====================================================
+     第一區
+===================================================== --><div class="section">
+    <span class="section-dot"></span>
+    01｜最近的我
+</div><div class="question">
+    <div class="question-title">
+        1. 最近最喜歡你怎麼叫我？
+    </div><input
+    type="text"
+    maxlength="25"
+    data-limit="25"
+    placeholder="點這裡輸入……"
+>
+
+<div class="char-count">
+    0 / 25
+</div>
+
+</div><div class="question">
+    <div class="question-title">
+        2. 最近最喜歡的食物？
+    </div><input
+    type="text"
+    maxlength="25"
+    data-limit="25"
+    placeholder="點這裡輸入……"
+>
+
+<div class="char-count">
+    0 / 25
+</div>
+
+</div><div class="question">
+    <div class="question-title">
+        3. 最近最討厭的食物？
+    </div><input
+    type="text"
+    maxlength="25"
+    data-limit="25"
+    placeholder="點這裡輸入……"
+>
+
+<div class="char-count">
+    0 / 25
+</div>
+
+</div><div class="question">
+    <div class="question-title">
+        4. 最近最喜歡的歌？
+    </div><input
+    type="text"
+    maxlength="25"
+    data-limit="25"
+    placeholder="點這裡輸入……"
+>
+
+<div class="char-count">
+    0 / 25
+</div>
+
+</div><div class="question">
+    <div class="question-title">
+        5. 最近喜歡做的事情？
+    </div><input
+    type="text"
+    maxlength="25"
+    data-limit="25"
+    placeholder="點這裡輸入……"
+>
+
+<div class="char-count">
+    0 / 25
+</div>
+
+</div><div class="question">
+    <div class="question-title">
+        6. 最近沉迷的東西？
+    </div><input
+    type="text"
+    maxlength="25"
+    data-limit="25"
+    placeholder="點這裡輸入……"
+>
+
+<div class="char-count">
+    0 / 25
+</div>
+
+</div><div class="little-note">
+    ˚₊‧♡‧₊˚　✿　˚₊‧♡‧₊˚
+</div><!-- =====================================================
+     第二區
+===================================================== --><div class="section">
+    <span class="section-dot"></span>
+    02｜關於我們
+</div><div class="question">
+    <div class="question-title">
+        7. 最近相處最幸福的瞬間？
+    </div><textarea
+    maxlength="25"
+    data-limit="25"
+    placeholder="把那個瞬間寫下來……"
+></textarea>
+
+<div class="char-count">
+    0 / 25
+</div>
+
+</div><div class="question">
+    <div class="question-title">
+        8. 最近希望你多做的事情？
+    </div><textarea
+    maxlength="25"
+    data-limit="25"
+    placeholder="偷偷告訴我吧……"
+></textarea>
+
+<div class="char-count">
+    0 / 25
+</div>
+
+</div><div class="question">
+    <div class="question-title">
+        9. 最近想一起完成的事情？
+    </div><textarea
+    maxlength="25"
+    data-limit="25"
+    placeholder="我們一起慢慢完成 ♡"
+></textarea>
+
+<div class="char-count">
+    0 / 25
+</div>
+
+</div><div class="question">
+    <div class="question-title">
+        10. 最近感謝的一件事？
+    </div><textarea
+    maxlength="25"
+    data-limit="25"
+    placeholder="謝謝你一直都在……"
+></textarea>
+
+<div class="char-count">
+    0 / 25
+</div>
+
+</div><div class="little-note">
+    ☁︎　☁︎　♡　☁︎　☁︎
+</div><!-- =====================================================
+     第三區
+===================================================== --><div class="section">
+    <span class="section-dot"></span>
+    03｜給半年後的自己
+</div><div class="question">
+    <div class="question-title">
+        11. 希望自己可以變成什麼樣子？
+    </div><textarea
+    maxlength="200"
+    data-limit="200"
+    placeholder="寫給未來的自己……"
+></textarea>
+
+<div class="char-count">
+    0 / 200
+</div>
+
+</div><div class="question">
+    <div class="question-title">
+        12. 半年後最想一起做的事？
+    </div><textarea
+    maxlength="200"
+    data-limit="200"
+    placeholder="希望那時候我們已經……"
+></textarea>
+
+<div class="char-count">
+    0 / 200
+</div>
+
+</div><div class="question">
+    <div class="question-title">
+        13. 給這半年的我們一段話
+    </div><textarea
+    class="big"
+    maxlength="200"
+    data-limit="200"
+    placeholder="寫給半年後的我們……"
+></textarea>
+
+<div class="char-count">
+    0 / 200
+</div>
+
+</div><!-- =====================================================
+     記憶卡
+===================================================== --><div class="memory-card"><span>
+    FOR OUR FUTURE ♡
+</span>
+
+<br>
+
+୨୧　希望半年後的我們　୨୧
+
+<br>
+
+打開這一頁的時候，還是會因為現在的彼此而微笑。
+
+</div><div class="flower">
+    ♡　✿　♡　✿　♡
+</div><div class="footer">♡ <span id="todayDate">2026.08.31</span>
+｜半年後再回來看看現在的我們 ♡
+
+</div></div><script>
+
+
+/* =====================================================
+   自動保存＋字數限制
+===================================================== */
+
+const fields =
+    document.querySelectorAll(
+        "#page input, #page textarea"
+    );
+
+
+fields.forEach(function(field, index) {
+
+    const limit =
+        Number(field.dataset.limit);
+
+
+    /* -------------------------------------------------
+       載入之前保存的答案
+    ------------------------------------------------- */
+
+    const saved =
+        localStorage.getItem(
+            "answer_" + index
+        );
+
+
+    if (saved !== null) {
+
+        field.value =
+            Array.from(saved)
+                .slice(0, limit)
+                .join("");
+
+    }
+
+
+    /* -------------------------------------------------
+       更新字數
+    ------------------------------------------------- */
+
+    function updateField() {
+
+        let value =
+            Array.from(field.value);
+
+
+        /* 真正限制字數 */
+
+        if (value.length > limit) {
+
+            value =
+                value.slice(0, limit);
+
+            field.value =
+                value.join("");
+
+        }
+
+
+        /* 保存 */
+
+        localStorage.setItem(
+            "answer_" + index,
+            field.value
+        );
+
+
+        /* 字數 */
+
+        const counter =
+            field.parentElement.querySelector(
+                ".char-count"
+            );
+
+
+        if (counter) {
+
+            counter.textContent =
+                Array.from(field.value).length +
+                " / " +
+                limit;
+
+        }
+
+    }
+
+
+    field.addEventListener(
+        "input",
+        updateField
+    );
+
+
+    field.addEventListener(
+        "paste",
+        function() {
+
+            setTimeout(
+                updateField,
+                0
+            );
+
+        }
+    );
+
+
+    updateField();
+
+});
+
+
+/* =====================================================
+   取得答案
+===================================================== */
+
+function getAnswers() {
+
+    const allFields =
+        document.querySelectorAll(
+            "#page input, #page textarea"
+        );
+
+
+    return Array.from(allFields).map(
+        function(field) {
+
+            const limit =
+                Number(field.dataset.limit);
+
+
+            return Array.from(
+                field.value || ""
+            )
+            .slice(0, limit)
+            .join("");
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   Canvas 圓角矩形
+===================================================== */
+
+function roundedRect(
+    ctx,
+    x,
+    y,
+    w,
+    h,
+    r,
+    fill,
+    stroke
+) {
+
+    r = Math.min(
+        r,
+        w / 2,
+        h / 2
+    );
+
+
+    ctx.beginPath();
+
+    ctx.moveTo(
+        x + r,
+        y
+    );
+
+    ctx.lineTo(
+        x + w - r,
+        y
+    );
+
+    ctx.quadraticCurveTo(
+        x + w,
+        y,
+        x + w,
+        y + r
+    );
+
+    ctx.lineTo(
+        x + w,
+        y + h - r
+    );
+
+    ctx.quadraticCurveTo(
+        x + w,
+        y + h,
+        x + w - r,
+        y + h
+    );
+
+    ctx.lineTo(
+        x + r,
+        y + h
+    );
+
+    ctx.quadraticCurveTo(
+        x,
+        y + h,
+        x,
+        y + h - r
+    );
+
+    ctx.lineTo(
+        x,
+        y + r
+    );
+
+    ctx.quadraticCurveTo(
+        x,
+        y,
+        x + r,
+        y
+    );
+
+    ctx.closePath();
+
+
+    if (fill) {
+
+        ctx.fillStyle =
+            fill;
+
+        ctx.fill();
+
+    }
+
+
+    if (stroke) {
+
+        ctx.strokeStyle =
+            stroke;
+
+        ctx.lineWidth = 2;
+
+        ctx.stroke();
+
+    }
+
+}
+
+
+/* =====================================================
+   中文換行
+===================================================== */
+
+function wrapText(
+    ctx,
+    text,
+    maxWidth,
+    font
+) {
+
+    ctx.font = font;
+
+    const lines = [];
+
+    let line = "";
+
+
+    for (
+        let i = 0;
+        i < text.length;
+        i++
+    ) {
+
+        const char =
+            text.charAt(i);
+
+
+        const test =
+            line + char;
+
+
+        if (
+            ctx.measureText(test).width >
+            maxWidth &&
+            line !== ""
+        ) {
+
+            lines.push(line);
+
+            line = char;
+
+        } else {
+
+            line = test;
+
+        }
+
+    }
+
+
+    if (line) {
+
+        lines.push(line);
+
+    }
+
+
+    return lines;
+
+}
+
+
+/* =====================================================
+   答案文字
+===================================================== */
+
+function drawAnswer(
+    ctx,
+    text,
+    x,
+    y,
+    width,
+    height,
+    defaultSize
+) {
+
+    ctx.textAlign = "left";
+
+
+    if (
+        !text ||
+        !text.trim()
+    ) {
+
+        ctx.fillStyle =
+            "#c9bbb0";
+
+        ctx.font =
+            "13px sans-serif";
+
+
+        ctx.fillText(
+            "點這裡輸入……",
+            x + 12,
+            y + 22
+        );
+
+        return;
+
+    }
+
+
+    const padding = 18;
+
+    const maxWidth =
+        width - padding * 2;
+
+
+    let size =
+        defaultSize;
+
+    let lines;
+
+
+    /* -------------------------------------------------
+       自動縮小字體直到能放下
+    ------------------------------------------------- */
+
+    while (size >= 9) {
+
+        lines =
+            wrapText(
+                ctx,
+                text,
+                maxWidth,
+                size + "px sans-serif"
+            );
+
+
+        const lineHeight =
+            size * 1.35;
+
+
+        if (
+            lines.length *
+            lineHeight
+            <= height - 12
+        ) {
+
+            break;
+
+        }
+
+
+        size--;
+
+    }
+
+
+    ctx.fillStyle =
+        "#594b43";
+
+    ctx.font =
+        size + "px sans-serif";
+
+
+    const lineHeight =
+        size * 1.35;
+
+
+    const maxLines =
+        Math.floor(
+            (height - 8) /
+            lineHeight
+        );
+
+
+    const visibleLines =
+        lines.slice(
+            0,
+            maxLines
+        );
+
+
+    visibleLines.forEach(
+        function(line, index) {
+
+            ctx.fillText(
+                line,
+                x + padding,
+                y + 21 +
+                index * lineHeight
+            );
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   小題
+   ★ ctx 改成參數傳入
+===================================================== */
+
+function drawSmallQuestion(
+    ctx,
+    number,
+    title,
+    answer,
+    x,
+    y,
+    width,
+    height
+) {
+
+    roundedRect(
+        ctx,
+        x,
+        y,
+        width,
+        height,
+        12,
+        "#fffdf9",
+        "#e5d7ce"
+    );
+
+
+    ctx.textAlign =
+        "left";
+
+
+    ctx.fillStyle =
+        "#68564d";
+
+    ctx.font =
+        "14px sans-serif";
+
+
+    const titleLines =
+        wrapText(
+            ctx,
+            number + ". " + title,
+            width - 25,
+            "14px sans-serif"
+        );
+
+
+    titleLines
+        .slice(0, 2)
+        .forEach(
+            function(line, index) {
+
+                ctx.fillText(
+                    line,
+                    x + 14,
+                    y + 21 +
+                    index * 18
+                );
+
+            }
+        );
+
+
+    const answerY =
+        y + 43;
+
+
+    const answerH =
+        height - 51;
+
+
+    roundedRect(
+        ctx,
+        x + 8,
+        answerY,
+        width - 16,
+        answerH,
+        8,
+        "#fffaf6",
+        "#e3d5cc"
+    );
+
+
+    drawAnswer(
+        ctx,
+        answer,
+        x + 8,
+        answerY,
+        width - 16,
+        answerH,
+        14
+    );
+
+
+    ctx.textAlign =
+        "right";
+
+    ctx.fillStyle =
+        "#ead3c8";
+
+    ctx.font =
+        "13px serif";
+
+    ctx.fillText(
+        "♡",
+        x + width - 10,
+        y + height - 6
+    );
+
+}
+
+
+/* =====================================================
+   大題
+   ★ ctx 改成參數傳入
+===================================================== */
+
+function drawLargeQuestion(
+    ctx,
+    number,
+    title,
+    answer,
+    y,
+    height
+) {
+
+    roundedRect(
+        ctx,
+        55,
+        y,
+        970,
+        height,
+        13,
+        "#fffdf9",
+        "#e5d7ce"
+    );
+
+
+    ctx.textAlign =
+        "left";
+
+
+    ctx.fillStyle =
+        "#68564d";
+
+    ctx.font =
+        "15px sans-serif";
+
+
+    ctx.fillText(
+        number + ". " + title,
+        72,
+        y + 23
+    );
+
+
+    const answerY =
+        y + 32;
+
+
+    const answerH =
+        height - 40;
+
+
+    roundedRect(
+        ctx,
+        67,
+        answerY,
+        946,
+        answerH,
+        9,
+        "#fffaf6",
+        "#e3d5cc"
+    );
+
+
+    drawAnswer(
+        ctx,
+        answer,
+        67,
+        answerY,
+        946,
+        answerH,
+        15
+    );
+
+
+    ctx.textAlign =
+        "right";
+
+    ctx.fillStyle =
+        "#ead3c8";
+
+    ctx.font =
+        "14px serif";
+
+    ctx.fillText(
+        "♡",
+        1007,
+        y + height - 7
+    );
+
+}
+
+
+/* =====================================================
+   匯出圖片
+   ★ 修正版
+===================================================== */
+
+function exportMobileImage() {
+
+    try {
+
+        const answers =
+            getAnswers();
+
+
+        const W = 1080;
+
+        const H = 1920;
+
+
+        const canvas =
+            document.createElement(
+                "canvas"
+            );
+
+
+        canvas.width =
+            W;
+
+        canvas.height =
+            H;
+
+
+        const ctx =
+            canvas.getContext(
+                "2d"
+            );
+
+
+        if (!ctx) {
+
+            alert(
+                "無法建立圖片，請重新整理頁面後再試一次。"
+            );
+
+            return;
+
+        }
+
+
+        ctx.imageSmoothingEnabled =
+            true;
+
+        ctx.imageSmoothingQuality =
+            "high";
+
+
+        /* =================================================
+           背景
+        ================================================= */
+
+        ctx.fillStyle =
+            "#faf7f1";
+
+        ctx.fillRect(
+            0,
+            0,
+            W,
+            H
+        );
+
+
+        /* =================================================
+           背景圓
+        ================================================= */
+
+        function circle(
+            x,
+            y,
+            r,
+            color
+        ) {
+
+            ctx.beginPath();
+
+            ctx.fillStyle =
+                color;
+
+            ctx.arc(
+                x,
+                y,
+                r,
+                0,
+                Math.PI * 2
+            );
+
+            ctx.fill();
+
+        }
+
+
+        circle(
+            40,
+            95,
+            45,
+            "#f2dfd6"
+        );
+
+        circle(
+            1045,
+            300,
+            60,
+            "#eee1d7"
+        );
+
+        circle(
+            35,
+            970,
+            35,
+            "#f2e5de"
+        );
+
+        circle(
+            1045,
+            1400,
+            45,
+            "#eadbd2"
+        );
+
+        circle(
+            40,
+            1840,
+            24,
+            "#f0e4da"
+        );
+
+
+        /* =================================================
+           背景插圖
+        ================================================= */
+
+        ctx.textAlign =
+            "center";
+
+        ctx.fillStyle =
+            "#d8c0b3";
+
+
+        ctx.font =
+            "52px serif";
+
+        ctx.fillText(
+            "☁︎",
+            55,
+            235
+        );
+
+
+        ctx.font =
+            "43px serif";
+
+        ctx.fillText(
+            "✿",
+            1035,
+            440
+        );
+
+
+        ctx.font =
+            "38px serif";
+
+        ctx.fillText(
+            "♡",
+            38,
+            840
+        );
+
+
+        ctx.font =
+            "37px serif";
+
+        ctx.fillText(
+            "✦",
+            1040,
+            1050
+        );
+
+
+        ctx.font =
+            "39px serif";
+
+        ctx.fillText(
+            "♡",
+            1038,
+            1650
+        );
+
+
+        /* =================================================
+           標題
+        ================================================= */
+
+        ctx.fillStyle =
+            "#c9a594";
+
+        ctx.font =
+            "23px sans-serif";
+
+        ctx.fillText(
+            "˚₊‧♡‧₊˚　✦　˚₊‧♡‧₊˚",
+            W / 2,
+            42
+        );
+
+
+        roundedRect(
+            ctx,
+            390,
+            53,
+            300,
+            32,
+            12,
+            "#f0ded5"
+        );
+
+
+        ctx.fillStyle =
+            "#9f7e6c";
+
+        ctx.font =
+            "12px sans-serif";
+
+        ctx.fillText(
+            "OUR LITTLE MEMORY",
+            W / 2,
+            75
+        );
+
+
+        roundedRect(
+            ctx,
+            55,
+            94,
+            970,
+            66,
+            20,
+            "#fffaf4",
+            "#eadbd0"
+        );
+
+
+        ctx.fillStyle =
+            "#80695d";
+
+        ctx.font =
+            "38px serif";
+
+        ctx.fillText(
+            "♡ 給半年後的我們 ♡",
+            W / 2,
+            138
+        );
+
+
+        ctx.fillStyle =
+            "#aa9081";
+
+        ctx.font =
+            "16px sans-serif";
+
+        ctx.fillText(
+            "一起把現在的我們，好好收藏起來。",
+            W / 2,
+            185
+        );
+
+
+        ctx.fillStyle =
+            "#c59d8b";
+
+        ctx.font =
+            "15px serif";
+
+        ctx.fillText(
+            "୨୧　₊˚⊹♡⊹˚₊　୨୧",
+            W / 2,
+            210
+        );
+
+
+        /* =================================================
+           小熊
+        ================================================= */
+
+        ctx.fillStyle =
+            "#e5cbbb";
+
+
+        ctx.beginPath();
+
+        ctx.arc(
+            935,
+            180,
+            26,
+            0,
+            Math.PI * 2
+        );
+
+        ctx.fill();
+
+
+        ctx.beginPath();
+
+        ctx.arc(
+            915,
+            158,
+            9,
+            0,
+            Math.PI * 2
+        );
+
+        ctx.fill();
+
+
+        ctx.beginPath();
+
+        ctx.arc(
+            955,
+            158,
+            9,
+            0,
+            Math.PI * 2
+        );
+
+        ctx.fill();
+
+
+        ctx.fillStyle =
+            "#80675b";
+
+        ctx.font =
+            "12px sans-serif";
+
+        ctx.fillText(
+            "•ᴗ•",
+            935,
+            185
+        );
+
+
+        /* =================================================
+           Section
+        ================================================= */
+
+        function drawSection(
+            title,
+            y
+        ) {
+
+            roundedRect(
+                ctx,
+                55,
+                y,
+                970,
+                42,
+                13,
+                "#eee2d8",
+                "#dfcfc3"
+            );
+
+
+            ctx.textAlign =
+                "left";
+
+
+            ctx.fillStyle =
+                "#c6a18c";
+
+            ctx.beginPath();
+
+            ctx.arc(
+                77,
+                y + 21,
+                5,
+                0,
+                Math.PI * 2
+            );
+
+            ctx.fill();
+
+
+            ctx.fillStyle =
+                "#755d50";
+
+            ctx.font =
+                "bold 18px sans-serif";
+
+            ctx.fillText(
+                title,
+                92,
+                y + 27
+            );
+
+
+            ctx.textAlign =
+                "right";
+
+            ctx.fillStyle =
+                "#bd9b88";
+
+            ctx.font =
+                "19px serif";
+
+            ctx.fillText(
+                "♡",
+                1005,
+                y + 27
+            );
+
+        }
+
+
+        /* =================================================
+           開始
+        ================================================= */
+
+        const marginX =
+            55;
+
+        const gap =
+            18;
+
+        const colWidth =
+            466;
+
+
+        let y =
+            230;
+
+
+        /* =================================================
+           第一區
+        ================================================= */
+
+        drawSection(
+            "01｜最近的我",
+            y
+        );
+
+        y += 49;
+
+
+        const q1 = [
+
+            "最近最喜歡你怎麼叫我？",
+
+            "最近最喜歡的食物？",
+
+            "最近最討厭的食物？",
+
+            "最近最喜歡的歌？",
+
+            "最近喜歡做的事情？",
+
+            "最近沉迷的東西？"
+
+        ];
+
+
+        const smallH1 =
+            92;
+
+
+        for (
+            let i = 0;
+            i < 6;
+            i += 2
+        ) {
+
+            drawSmallQuestion(
+                ctx,
+                i + 1,
+                q1[i],
+                answers[i],
+                marginX,
+                y,
+                colWidth,
+                smallH1
+            );
+
+
+            drawSmallQuestion(
+                ctx,
+                i + 2,
+                q1[i + 1],
+                answers[i + 1],
+                marginX + colWidth + gap,
+                y,
+                colWidth,
+                smallH1
+            );
+
+
+            y +=
+                smallH1 + 9;
+
+        }
+
+
+        ctx.textAlign =
+            "center";
+
+        ctx.fillStyle =
+            "#c5a08d";
+
+        ctx.font =
+            "18px sans-serif";
+
+        ctx.fillText(
+            "˚₊‧♡‧₊˚　✿　˚₊‧♡‧₊˚",
+            W / 2,
+            y + 10
+        );
+
+
+        y += 27;
+
+
+        /* =================================================
+           第二區
+        ================================================= */
+
+        drawSection(
+            "02｜關於我們",
+            y
+        );
+
+        y += 49;
+
+
+        const q2 = [
+
+            "最近相處最幸福的瞬間？",
+
+            "最近希望你多做的事情？",
+
+            "最近想一起完成的事情？",
+
+            "最近感謝的一件事？"
+
+        ];
+
+
+        const smallH2 =
+            116;
+
+
+        for (
+            let i = 0;
+            i < 4;
+            i += 2
+        ) {
+
+            drawSmallQuestion(
+                ctx,
+                i + 7,
+                q2[i],
+                answers[i + 6],
+                marginX,
+                y,
+                colWidth,
+                smallH2
+            );
+
+
+            drawSmallQuestion(
+                ctx,
+                i + 8,
+                q2[i + 1],
+                answers[i + 7],
+                marginX + colWidth + gap,
+                y,
+                colWidth,
+                smallH2
+            );
+
+
+            y +=
+                smallH2 + 9;
+
+        }
+
+
+        ctx.textAlign =
+            "center";
+
+        ctx.fillStyle =
+            "#c4a39a";
+
+        ctx.font =
+            "20px sans-serif";
+
+        ctx.fillText(
+            "☁︎　☁︎　♡　☁︎　☁︎",
+            W / 2,
+            y + 10
+        );
+
+
+        y += 28;
+
+
+        /* =================================================
+           第三區
+        ================================================= */
+
+        drawSection(
+            "03｜給半年後的自己",
+            y
+        );
+
+        y += 49;
+
+
+        /* 11 */
+
+        drawLargeQuestion(
+            ctx,
+            11,
+            "希望自己可以變成什麼樣子？",
+            answers[10],
+            y,
+            175
+        );
+
+        y += 183;
+
+
+        /* 12 */
+
+        drawLargeQuestion(
+            ctx,
+            12,
+            "半年後最想一起做的事？",
+            answers[11],
+            y,
+            175
+        );
+
+        y += 183;
+
+
+        /* 13 */
+
+        drawLargeQuestion(
+            ctx,
+            13,
+            "給這半年的我們一段話",
+            answers[12],
+            y,
+            270
+        );
+
+        y += 282;
+
+
+        /* =================================================
+           記憶卡
+        ================================================= */
+
+        roundedRect(
+            ctx,
+            55,
+            y,
+            970,
+            88,
+            17,
+            "#f4e7de",
+            "#d6bca9"
+        );
+
+
+        ctx.textAlign =
+            "center";
+
+
+        ctx.fillStyle =
+            "#a17e6d";
+
+        ctx.font =
+            "11px sans-serif";
+
+        ctx.fillText(
+            "FOR OUR FUTURE ♡",
+            W / 2,
+            y + 21
+        );
+
+
+        ctx.fillStyle =
+            "#967d6e";
+
+        ctx.font =
+            "15px sans-serif";
+
+        ctx.fillText(
+            "୨୧　希望半年後的我們　୨୧",
+            W / 2,
+            y + 43
+        );
+
+
+        ctx.font =
+            "12px sans-serif";
+
+        ctx.fillText(
+            "打開這一頁的時候，還是會因為現在的彼此而微笑。",
+            W / 2,
+            y + 66
+        );
+
+
+        /* =================================================
+           底部
+        ================================================= */
+
+        ctx.fillStyle =
+            "#c6a08e";
+
+        ctx.font =
+            "17px serif";
+
+        ctx.fillText(
+            "♡　✿　♡　✿　♡",
+            W / 2,
+            y + 116
+        );
+
+
+        ctx.fillStyle =
+            "#b09d90";
+
+        ctx.font =
+            "12px sans-serif";
+
+        ctx.fillText(
+            "♡ 2026.08.31　｜　半年後再回來看看現在的我們 ♡",
+            W / 2,
+            y + 142
+        );
+
+
+        /* =================================================
+           匯出 PNG
+        ================================================= */
+
+        downloadCanvas(
+            canvas,
+            "給半年後的我們_我的答案.png"
+        );
+
+    }
+
+
+    catch (error) {
+
+        console.error(
+            "Export Error:",
+            error
+        );
+
+
+        alert(
+            "匯出時發生錯誤。\n\n" +
+            "請重新整理頁面後再試一次。"
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   PNG 下載
+   ★ toBlob + dataURL 雙重保險
+===================================================== */
+
+function downloadCanvas(
+    canvas,
+    filename
+) {
+
+    /* -------------------------------------------------
+       優先使用 toBlob
+    ------------------------------------------------- */
+
+    if (
+        canvas.toBlob
+    ) {
+
+        canvas.toBlob(
+            function(blob) {
+
+                if (!blob) {
+
+                    downloadCanvasAsDataURL(
+                        canvas,
+                        filename
+                    );
+
+                    return;
+
+                }
+
+
+                try {
+
+                    const url =
+                        URL.createObjectURL(
+                            blob
+                        );
+
+
+                    const link =
+                        document.createElement(
+                            "a"
+                        );
+
+
+                    link.href =
+                        url;
+
+                    link.download =
+                        filename;
+
+                    link.style.display =
+                        "none";
+
+
+                    document.body.appendChild(
+                        link
+                    );
+
+
+                    link.click();
+
+
+                    document.body.removeChild(
+                        link
+                    );
+
+
+                    setTimeout(
+                        function() {
+
+                            URL.revokeObjectURL(
+                                url
+                            );
+
+                        },
+                        3000
+                    );
+
+                }
+
+                catch (error) {
+
+                    console.error(
+                        "Blob Download Error:",
+                        error
+                    );
+
+
+                    downloadCanvasAsDataURL(
+                        canvas,
+                        filename
+                    );
+
+                }
+
+            },
+
+            "image/png"
+        );
+
+    }
+
+    else {
+
+        downloadCanvasAsDataURL(
+            canvas,
+            filename
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   備用下載方式
+===================================================== */
+
+function downloadCanvasAsDataURL(
+    canvas,
+    filename
+) {
+
+    try {
+
+        const dataURL =
+            canvas.toDataURL(
+                "image/png"
+            );
+
+
+        const link =
+            document.createElement(
+                "a"
+            );
+
+
+        link.href =
+            dataURL;
+
+        link.download =
+            filename;
+
+        link.style.display =
+            "none";
+
+
+        document.body.appendChild(
+            link
+        );
+
+
+        link.click();
+
+
+        document.body.removeChild(
+            link
+        );
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "DataURL Download Error:",
+            error
+        );
+
+
+        /* 最後備用：開新頁面 */
+
+        try {
+
+            const dataURL =
+                canvas.toDataURL(
+                    "image/png"
+                );
+
+
+            const newWindow =
+                window.open(
+                    "",
+                    "_blank"
+                );
+
+
+            if (newWindow) {
+
+                newWindow.document.write(
+                    '<title>我的答案圖片</title>' +
+                    '<img src="' +
+                    dataURL +
+                    '" style="max-width:100%;height:auto;">'
+                );
+
+                newWindow.document.close();
+
+            }
+
+            else {
+
+                alert(
+                    "圖片已產生，但瀏覽器阻止了下載。\n" +
+                    "請允許開啟新視窗後再按一次匯出。"
+                );
+
+            }
+
+        }
+
+        catch (finalError) {
+
+            console.error(
+                "Final Export Error:",
+                finalError
+            );
+
+
+            alert(
+                "圖片產生失敗，請重新整理頁面後再試一次。"
+            );
+
+        }
+
+    }
+
+}
+
+</script></body>
+</html>
